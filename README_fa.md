@@ -18,3 +18,24 @@ dataBinding{
 </layout>
 ```
 
+یک متغیر در لایوت تعریف می کنیم به شکل زیر
+
+``activity_main.xml``
+```xml
+<layout>
+    
+    <data>
+            
+        <variable
+           name="number"
+           type="String" />
+            
+    </data>
+    
+    ...
+</layout>
+```
+
+یک متغیر از نوع رشته به اسم نامبر ساختیم
+
+
