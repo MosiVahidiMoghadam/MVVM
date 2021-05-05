@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Step 1 MVVM
 
 README <a href="./README_fa.md">parsian</a>
@@ -115,3 +116,11 @@ In the following line, we set the variable that we created in Live
 ```kotlin
     binding.number = "hello mvvm"
 ```
+=======
+# MVVM
+MVVM in Android Kotlin
+
+
+<a href="https://github.com/alirezabashi98/MVVM/tree/step1">Stop 1 mvvm</a><br>
+<a href="https://github.com/alirezabashi98/MVVM/tree/step2">Stop 2 mvvm</a>
+>>>>>>> 52e8c55262fcf4f37d730e18619427204776ea9b
