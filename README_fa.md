@@ -68,3 +68,49 @@ dataBinding{
 </layout>
 ```
 
+خب وارد کلاس مین اکتیویتی میشیم و بیندینگ تعریف میکنیم و ویو و کلاس بهم وصل میکنیم به شکل زیر
+
+``MainActivity.kt``
+```kotlin
+package com.example.mvvm
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import com.example.mvvm.databinding.ActivityMainBinding
+
+class MainActivity : AppCompatActivity() {
+    
+    private lateinit var binding : ActivityMainBinding
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //setContentView(R.layout.activity_main)
+        
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding.number = "hello mvvm"
+
+    }
+}
+```
+
+در خط زیر یه متغیر خالی از کلاس ساخته شده توست دیتا بیندینگ میسازیم
+
+``MainActivity.kt``
+```kotlin
+    private lateinit var binding : ActivityMainBinding
+```
+
+در خط زیر مقدار دهی اولیه انجام میدیم لیوت و کلاس بهم وصل میکنیم
+
+``MainActivity.kt``
+```kotlin
+    binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+```
+
+در خط زیر متغیری که در لایوت ساختیم مقدار دهی میکنیم
+
+``MainActivity.kt``
+```kotlin
+    binding.number = "hello mvvm"
+```

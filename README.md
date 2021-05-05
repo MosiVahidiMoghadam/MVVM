@@ -69,3 +69,49 @@ Adding a value to a variable in Text View for run time The variable is changed, 
 </layout>
 ```
 
+Well, we enter the main activity class and define the binding and connect the view and the class as follows
+
+``MainActivity.kt``
+```kotlin
+package com.example.mvvm
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import com.example.mvvm.databinding.ActivityMainBinding
+
+class MainActivity : AppCompatActivity() {
+    
+    private lateinit var binding : ActivityMainBinding
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //setContentView(R.layout.activity_main)
+        
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding.number = "hello mvvm"
+
+    }
+}
+```
+
+In the following line, we create an empty variable of the data building class
+
+``MainActivity.kt``
+```kotlin
+    private lateinit var binding : ActivityMainBinding
+```
+
+In the line below, we do the initialization and connect the levee and the class
+
+``MainActivity.kt``
+```kotlin
+    binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+```
+
+In the following line, we set the variable that we created in Live
+
+``MainActivity.kt``
+```kotlin
+    binding.number = "hello mvvm"
+```
