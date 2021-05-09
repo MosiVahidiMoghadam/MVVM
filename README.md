@@ -17,3 +17,12 @@
     </data>
 ```
 
+Inside Activity, I deleted everything and added a Recycler View and set an idea
+
+``activity_main.xml``
+```xml
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_mainActivity_showListUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```

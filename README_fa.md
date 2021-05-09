@@ -18,3 +18,12 @@
     </data>
 ```
 
+داخل مین اکتیویتی همه پاک کردم و ریسایکلر ویو اضافه کردم و یه ایدی ست کردم
+
+``activity_main.xml``
+```xml
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_mainActivity_showListUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
