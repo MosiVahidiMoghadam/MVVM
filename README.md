@@ -1,5 +1,7 @@
 # Step 2 MVVM
  
+README <a href="./README_fa.md">parsian</a>
+
  I changed the folder and its structure first
  
  In the next step, I created the Recycler View item as shown
