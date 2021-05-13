@@ -28,3 +28,8 @@ Inside Activity, I deleted everything and added a Recycler View and set an idea
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 ```
+We set the live manager of Recycler View
+
+```kotlin
+binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
+```

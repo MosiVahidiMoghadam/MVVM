@@ -28,3 +28,11 @@
         android:layout_height="match_parent" />
 ```
 
+لایوت منیجر ریسایکلر ویو رو ست میکنیم
+
+```kotlin
+binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
+```
+
+
+
