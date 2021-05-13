@@ -34,5 +34,45 @@
 binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
 ```
 
+یه مدل میسازیم و ساختار کلی کاربران میزاریم توش
+``UsersModel.kt``
 
+بعد میریم سراغ آداپتور
+``ShowUserAdapter.kt``
 
+فقط یه نکته داخل اداپتر هست برای توضیح اونم اینه از ویو استفاده نمیکنیم و از بایندینگ ایتم ریسای کلر ویو استفاده میکنیم به شکل زیر
+
+```kotlin
+ class ViewHolderShowUser(private val binding: ItemRecyclerBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun setData(date: UsersModel) {
+            binding.name = date.name
+        }
+
+    }
+``` 
+
+بریم سراخ مین اکتیویتی به شکل زیر مقادیر دیتا میدیم
+```kotlin
+val dates : MutableList<UsersModel> = mutableListOf()
+
+...
+
+private fun setListDates(){
+        for (item in 18..28){
+            dates.add(
+                UsersModel(
+                    "Name$item",
+                    "Family$item",
+                    item
+                )
+            )
+        }
+    }
+```
+
+حالا آداپتور رو ست میکنیم
+```kotlin
+binding.recyMainActivityShowListUser.adapter = ShowUserAdapter(dates)
+```

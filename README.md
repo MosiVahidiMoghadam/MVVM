@@ -33,3 +33,46 @@ We set the live manager of Recycler View
 ```kotlin
 binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
 ```
+
+We build a model and build the general structure of the users
+``UsersModel.kt``
+
+Then we go to the adapter
+``ShowUserAdapter.kt``
+
+There is only one point inside the adapter to explain that we do not use View and we use the binding of Rissa Chlor View View item as follows
+
+```kotlin
+ class ViewHolderShowUser(private val binding: ItemRecyclerBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun setData(date: UsersModel) {
+            binding.name = date.name
+        }
+
+    }
+``` 
+
+Let's go to the main activity as shown below the data values
+```kotlin
+val dates : MutableList<UsersModel> = mutableListOf()
+
+...
+
+private fun setListDates(){
+        for (item in 18..28){
+            dates.add(
+                UsersModel(
+                    "Name$item",
+                    "Family$item",
+                    item
+                )
+            )
+        }
+    }
+```
+
+Now we set the adapter
+```kotlin
+binding.recyMainActivityShowListUser.adapter = ShowUserAdapter(dates)
+```
