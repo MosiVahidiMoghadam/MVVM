@@ -1,6 +1,7 @@
 # MVVM
 MVVM in Android Kotlin
 
+![](https://github.com/alirezabashi98/MVVM/raw/master/mvvm.png)
 
 DataBinding : <a href="https://github.com/alirezabashi98/MVVM/tree/step1">Step 1 mvvm</a><br>
 DataBinding : <a href="https://github.com/alirezabashi98/MVVM/tree/step2">Step 2 mvvm</a><br>
