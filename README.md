@@ -1,6 +1,6 @@
 # MVVM & Android Jetpack
 
-## MVVM in Kotlin
+## MVVM in Android Kotlin
 
 ![](mvvm.png)
 
