@@ -21,3 +21,31 @@ Add libraries
 
 ```
 
+We make a model called below
+
+``LifecycleModel.kt``
+
+And we inherit as follows
+
+``LifecycleModel.kt``
+```kotlin
+class LifecycleModel : LifecycleObserver {
+ 
+}
+```
+
+Now we write a function for different modes as follows
+
+``LifecycleModel.kt``
+```kotlin
+class LifecycleModel : LifecycleObserver {
+ 
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    fun onCreate() {
+        Log.i("TAG_TEST", "onCreate")
+    }
+}
+```
+
+Well, in the annotation of the type function, it is specified that here is that credit
+  And inside the function are written the events that should benefit the creator

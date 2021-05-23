@@ -19,3 +19,31 @@
 
 ```
 
+یه مدل میسازیم به  اسم زیر
+
+``LifecycleModel.kt``
+
+و ارث بری می کنیم به شکل زیر
+
+``LifecycleModel.kt``
+```kotlin
+class LifecycleModel : LifecycleObserver {
+ 
+}
+```
+
+حالا به شکل زیر یک تابع برای حالت های مختلف مینویسیم
+
+``LifecycleModel.kt``
+```kotlin
+class LifecycleModel : LifecycleObserver {
+ 
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    fun onCreate() {
+        Log.i("TAG_TEST", "onCreate")
+    }
+}
+```
+
+خب در انوتیشن تابع نوعش مشخص میشه که اینجا اون کریت هست
+ و داخل تابع اتفاقاتی که موفع ان کریت باید پیش بیاد نوشته میشوند
