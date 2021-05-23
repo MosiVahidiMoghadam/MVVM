@@ -1,10 +1,10 @@
 # MVVM & Android Jetpack
 
-## MVVM in Android Kotlin
+## MVVM in Kotlin
 
 ![](mvvm.png)
 
-## Android Jetpack in Android Kotlin
+## Android Jetpack in Kotlin
 
 ![](android-jetpack.png)
 
