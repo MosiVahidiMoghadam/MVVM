@@ -1,78 +1,21 @@
-# Step 2 MVVM
+# Step 3 MVVM
  
-README <a href="./README_fa.md">parsian</a>
+Add libraries
 
- I changed the folder and its structure first
- 
- In the next step, I created the Recycler View item as shown
- 
- > We have a data in the following form of string type to get text view text
+``build.gradle(Module: MVVM app)``
+```groovy
 
-``item_recycler.xml``
-```xml
-<data>
-        
-        <variable
-            name="name"
-            type="String" />
-        
-    </data>
+    // Lifecycles
+    // https://developer.android.com/jetpack/androidx/releases/lifecycle#groovy
+    def lifecycle_version = "2.3.1"
+    def arch_version = "2.1.0"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
 ```
 
-Inside Activity, I deleted everything and added a Recycler View and set an idea
-
-``activity_main.xml``
-```xml
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recy_mainActivity_showListUser"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-```
-We set the live manager of Recycler View
-
-```kotlin
-binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
-```
-
-We build a model and build the general structure of the users
-``UsersModel.kt``
-
-Then we go to the adapter
-``ShowUserAdapter.kt``
-
-There is only one point inside the adapter to explain that we do not use View and we use the binding of Rissa Chlor View View item as follows
-
-```kotlin
- class ViewHolderShowUser(private val binding: ItemRecyclerBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun setData(date: UsersModel) {
-            binding.name = date.name
-        }
-
-    }
-``` 
-
-Let's go to the main activity as shown below the data values
-```kotlin
-val dates : MutableList<UsersModel> = mutableListOf()
-
-...
-
-private fun setListDates(){
-        for (item in 18..28){
-            dates.add(
-                UsersModel(
-                    "Name$item",
-                    "Family$item",
-                    item
-                )
-            )
-        }
-    }
-```
-
-Now we set the adapter
-```kotlin
-binding.recyMainActivityShowListUser.adapter = ShowUserAdapter(dates)
-```
