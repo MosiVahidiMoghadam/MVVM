@@ -53,7 +53,7 @@ binding.recyMainActivityShowListUser.layoutManager = LinearLayoutManager(this)
     }
 ``` 
 
-بریم سراخ مین اکتیویتی به شکل زیر مقادیر دیتا میدیم
+بریم سراغ مین اکتیویتی به شکل زیر مقادیر دیتا میدیم
 ```kotlin
 val dates : MutableList<UsersModel> = mutableListOf()
 
